@@ -1,12 +1,6 @@
 require "cle_palindrome/version"
 
-# commented out to follow Learn Enough Ruby directions
-# module ClePalindrome
-#   class Error < StandardError; end
-#   # Your code goes here...
-# end
-
-class String
+module ClePalindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
@@ -15,8 +9,14 @@ class String
   private
     # Returns content for palindrome testing.
     def processed_content
-      self.scan(/[a-z]/i).join.downcase
+      self.to_s.scan(/[a-z0-9]/i).join.downcase
     end
-  
 end
 
+class String
+  include ClePalindrome
+end
+
+class Integer
+  include ClePalindrome
+end

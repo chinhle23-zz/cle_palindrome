@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cle_palindrome (0.1.0)
+    cle_palindrome (0.2.0)
 
 GEM
   remote: https://rubygems.org/
