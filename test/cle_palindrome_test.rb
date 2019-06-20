@@ -35,4 +35,7 @@ class ClePalindromeTest < Minitest::Test
     assert 12321.palindrome?
   end
 
+  def test_space_non_palindrome
+    refute "  ".palindrome?
+  end  
 end
